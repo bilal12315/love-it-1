@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Square Lines</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .box {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    
+    .line {
+      width: 350px;
+      height: 30px;
+      margin: 10px 0;
+      transition: all 0.7s ease;
+      position: relative;
+    }
+
+    .aaa { background: red; }
+    .bbb { background: green; }
+    .vvv { background: blue; }
+    .ggg { background: purple; }
+
+    
+    .square .aaa {
+      position: absolute;
+      top: 0;
+      left: 25px;
+      width: 250px;
+      height: 20px;
+    }
+
+    .square .bbb {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 20px;
+      height: 250px;
+    }
+
+    .square .vvv {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      width: 20px;
+      height: 250px;
+      left: 280px;
+    }
+
+    .square .ggg {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      width: 250px;
+      height: 20px;
+      top: 280px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="box">
+    <div class="line aaa"></div>
+    <div class="line bbb"></div>
+    <div class="line vvv"></div>
+    <div class="line ggg"></div>
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+    const lines = document.querySelectorAll('.line');
+
+    lines.forEach(line => {
+      line.addEventListener('click', () => {
+        box.classList.add('square');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
